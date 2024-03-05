@@ -27,14 +27,14 @@ export class SubjectComponent implements OnInit{
     const subject = new Subject();
     const data = ajax("https://randomuser.me/api");
 
-    // data.subscribe((res) => console.log(res));
-    // data.subscribe((res) => console.log(res));
-    // data.subscribe((res) => console.log(res));
+    data.subscribe((res) => console.log(res)); // one call
+    data.subscribe((res) => console.log(res)); // second call
+    data.subscribe((res) => console.log(res)); // third call
 
     subject.subscribe((res) => console.log(res));
     subject.subscribe((res) => console.log(res));
     subject.subscribe((res) => console.log(res));
 
-    data.subscribe(subject);
+    data.subscribe(subject); // Just one call
   }
 }
