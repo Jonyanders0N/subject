@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { SubjectComponent } from './subject/subject.component';
 import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.component';
 import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
+import { AsyncSubjectComponent } from './async-subject/async-subject.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ReplaySubjectComponent } from './replay-subject/replay-subject.componen
     ShowTaskComponent,
     SubjectComponent,
     BehaviorSubjectComponent,
-    ReplaySubjectComponent
+    ReplaySubjectComponent,
+    AsyncSubjectComponent
   ],
   imports: [
     BrowserModule,

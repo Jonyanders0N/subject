@@ -9,8 +9,8 @@ import { ajax } from 'rxjs/ajax';
 })
 export class SubjectComponent implements OnInit{
   ngOnInit(){
-    let obsObserver = new Observable((observer) => { observer.next(Math.random()) })
-    let obsSubject = new Subject();
+    let obsObserver = new Observable((observer) => { observer.next(Math.random()) }) // Observable
+    let obsSubject = new Subject(); // Subject
 
     // Subscribe 1
     obsObserver.subscribe((data) => console.log("obsObserver",data));
@@ -27,10 +27,12 @@ export class SubjectComponent implements OnInit{
     const subject = new Subject();
     const data = ajax("https://randomuser.me/api");
 
+    // Observable
     data.subscribe((res) => console.log(res)); // one call
     data.subscribe((res) => console.log(res)); // second call
     data.subscribe((res) => console.log(res)); // third call
 
+    // Subject
     subject.subscribe((res) => console.log(res));
     subject.subscribe((res) => console.log(res));
     subject.subscribe((res) => console.log(res));
