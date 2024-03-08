@@ -19,7 +19,7 @@ export class AsyncSubjectComponent implements OnInit{
 
     objAsyncSubject.complete();
     objAsyncSubject.next(400);
-    objAsyncSubject.complete();
+    objAsyncSubject.complete(); // This complete is ignored because this observable has already been completed, so cannot emit value anymore.
 
     objAsyncSubject.subscribe((data) => console.log("Subscribe 2:", data));
   }
